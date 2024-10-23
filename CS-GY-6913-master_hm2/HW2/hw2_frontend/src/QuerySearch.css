@@ -1,0 +1,76 @@
+.query-container {
+    max-width: max(80%, 1250px);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .query-input {
+    width: max(40%, 500px);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .query-mode {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .query-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .query-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: gray;
+    font-weight: bold;
+  }
+  
+  .processing-time {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+  }
+  
+  .result-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-item p {
+    margin: 5px 0;
+  }
+  
+  .snippet {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    white-space: pre-wrap;  /* Preserve whitespace and allow long text */
+    max-height: 100px;  /* Limit the height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-y: auto;
+  }
+  
