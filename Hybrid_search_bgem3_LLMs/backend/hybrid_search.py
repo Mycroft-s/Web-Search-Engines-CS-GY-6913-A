@@ -3,6 +3,7 @@ from pymilvus import (
 )
 from bge_m3 import BGEM3EmbeddingFunction  # If using BGE models
 import logging
+from query_expansion import expand_query
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -64,4 +65,9 @@ def hybrid_search_with_rerank(query_text, collection_name='build_milvus_800k', u
 if __name__ == "__main__":
     # Example query
     query = "What is manhattan project?"
-    hybrid_search_with_rerank(query, collection_name='build_milvus_800k', use_reranker=True, top_k=10)
+    # Expand the query
+    api_key="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"
+    expanded_query = expand_query(query, api_key)
+    print(f"Expanded Query: {expanded_query}")
+
+    hybrid_search_with_rerank(expanded_query, collection_name='build_milvus_800k', use_reranker=True, top_k=10)
