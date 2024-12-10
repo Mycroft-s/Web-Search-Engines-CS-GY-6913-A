@@ -29,7 +29,7 @@ def hybrid_search_with_rerank(query_text, collection_name='build_milvus_800k', u
 
     # Generate query embeddings using the BGE model
     logging.info("Loading BGE model and generating query embeddings...")
-    ef = BGEM3EmbeddingFunction(use_fp16=False, device="cpu")
+    ef = BGEM3EmbeddingFunction(use_fp16=False, device="cuda")
     query_embeddings = ef([query_text])
 
     # Prepare search parameters
