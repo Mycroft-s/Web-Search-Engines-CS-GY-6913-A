@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cstdint>
 
-// Variable-byte decoding function
+// Variable-byte decoding function writen by mycroft
 int InvertedList::varByteDecode(std::istream& in) {
     int number = 0;
     int shift = 0;
